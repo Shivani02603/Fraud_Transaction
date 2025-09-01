@@ -16,18 +16,21 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import warnings
+import sys
+
 warnings.filterwarnings('ignore')
 
-import sys
-st.sidebar.info(f"🐍 Python version: {sys.version}")
-
-# Page config
+# ✅ Page config must be first Streamlit call
 st.set_page_config(
     page_title="Fraud Detection System",
     page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Now safe to use Streamlit UI
+st.sidebar.info(f"🐍 Python version: {sys.version}")
+
 
 # Custom CSS for styling
 st.markdown("""
