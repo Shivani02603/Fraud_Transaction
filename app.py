@@ -18,6 +18,9 @@ from plotly.subplots import make_subplots
 import warnings
 warnings.filterwarnings('ignore')
 
+import sys
+st.sidebar.info(f"🐍 Python version: {sys.version}")
+
 # Page config
 st.set_page_config(
     page_title="Fraud Detection System",
